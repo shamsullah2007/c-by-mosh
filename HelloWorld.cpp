@@ -2,10 +2,18 @@
 using namespace std;
 int main() {
 
-    bool uscitizen=true;
-    bool bachler=true;
-    bool year_of_experianc=3;
-    bool all=uscitizen && (bachler || year_of_experianc>2);
-    cout<<boolalpha<<uscitizen<<endl;
+
+    int sales;
+    cout<<"enter the amount of sales:";
+    cin>>sales;
+
+    if (sales<=10000)
+        cout<<"comission"<<endl<<"$"<<sales*0.1;
+    else if (sales<=15000)
+        cout<<"comission"<<endl<<"$"<<sales*0.15;
+    else
+        cout<<"comission"<<endl<<"$"<<sales*0.2;
+
+
     return 0;
 }
