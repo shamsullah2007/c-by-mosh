@@ -2,21 +2,21 @@
 #include <iostream>
 using namespace std;
 int main() {
-
-
-    string street;
-    string city;
-    string state;
-    string country;
-    string country_code;
-    getline(cin, street);
-    getline(cin, city);
-    getline(cin, state);
-    getline(cin, country);
-    getline(cin, country_code);
-    cout<<setw(20)<<"STREET"<<setw(20)<<"CITY"<<setw(20)<<"STATE"<<setw(20)<<"COUNYRY"<<endl;
-    cout<<setw(20)<<street<<setw(20)<<city<<setw(20)<<state<<setw(20)<<country<<endl;
-
+    //nasting if and else statment
+    bool iscitizen =true
+     ;
+    short tuition=0;
+    bool caresident=false;
+    if (iscitizen) {
+        if (!caresident)
+            tuition=1000;
+        else
+            tuition=1000;
+            // cout<<tuition;
+    }
+    else
+        tuition=3000;
+    cout << "Tuition is: " << tuition << endl;
 
 
     return 0;
