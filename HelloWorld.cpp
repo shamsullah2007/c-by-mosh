@@ -4,14 +4,9 @@ using namespace std;
 int main() {
     int a ;
     int b;
-    int z=0;
-    cin >> a;
-    cin>> b;
-    if (a>b)
-        z=a;
-    else
-        z=b;
-    cout<<z;
+    cin >> a >> b;
+    int z=(a>b)?a:b;
+    cout<<z<<endl;
 
 
     return 0;
