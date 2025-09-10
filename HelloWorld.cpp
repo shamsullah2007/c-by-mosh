@@ -2,21 +2,16 @@
 #include <iostream>
 using namespace std;
 int main() {
-    //nasting if and else statment
-    bool iscitizen =true
-     ;
-    short tuition=0;
-    bool caresident=false;
-    if (iscitizen) {
-        if (!caresident)
-            tuition=1000;
-        else
-            tuition=1000;
-            // cout<<tuition;
-    }
+    int a ;
+    int b;
+    int z=0;
+    cin >> a;
+    cin>> b;
+    if (a>b)
+        z=a;
     else
-        tuition=3000;
-    cout << "Tuition is: " << tuition << endl;
+        z=b;
+    cout<<z;
 
 
     return 0;
