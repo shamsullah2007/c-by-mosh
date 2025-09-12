@@ -1,18 +1,10 @@
-#include  <iostream>
+#include <iostream>
 using namespace std;
 int main() {
-
-// while loop
-    int x;
-
-    do {
-        cin>>x;
-        cout<<"Hello World";
+    for (int x =0;x<10;x++) {
+        for (int y=0;y<10;y++) {
+            cout<<"("<<x<<","<<y<<")";
+        }
 
     }
-    while (x==3);
-
-
-    return 0;
-
 }
