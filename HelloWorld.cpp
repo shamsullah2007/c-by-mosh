@@ -3,23 +3,16 @@ using namespace std;
 int main() {
 
 // while loop
-    int secret =10;
-    int x=0;
-    int counter=0;
-    // this will loop until the conditon get false
-    while (x!=secret) {
-        cout<<"gues a number;"<<endl;
-        cin>>x;
-        if (x<10) {
-            cout<<"gause higer"<<endl;
+    int x;
 
-        }
-        else if (x>10) {
-            cout<<"lower"<<endl;
-        }
-        counter++;
+    do {
+        cin>>x;
+        cout<<"Hello World";
 
     }
-    cout<<"corect gues in "<<counter<<"  "<<"attemps is :"<<secret<<endl;
+    while (x==3);
+
+
+    return 0;
 
 }
