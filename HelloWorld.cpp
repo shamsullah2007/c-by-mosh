@@ -1,24 +1,25 @@
 #include  <iostream>
 using namespace std;
 int main() {
-    // int numbers[]={1,2,3,4};
-    // for (int i=0;i<sizeof(numbers)/sizeof(int);i++) {
-    //     cout<<numbers[i]<<endl;
-    // }
-    // for (int number:numbers)
-    //     cout<<number<<endl;
 
-    // double sum=0;
-    // double temprature[]={45,55.5,70,35.5};
-    // for (double temp:temprature)
-    //     sum+=temp;
-    // double avg=sum/(sizeof(temprature)/sizeof(double));
-    // cout<<avg<<endl;
+// while loop
+    int secret =10;
+    int x=0;
+    int counter=0;
+    // this will loop until the conditon get false
+    while (x!=secret) {
+        cout<<"gues a number;"<<endl;
+        cin>>x;
+        if (x<10) {
+            cout<<"gause higer"<<endl;
 
-    string name="shams ullah";
-    for  (char nam:name)
-        cout << nam ;
+        }
+        else if (x>10) {
+            cout<<"lower"<<endl;
+        }
+        counter++;
 
-     return 0;
+    }
+    cout<<"corect gues in "<<counter<<"  "<<"attemps is :"<<secret<<endl;
 
 }
