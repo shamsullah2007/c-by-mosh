@@ -1,23 +1,16 @@
+#include <cmath>
 #include <iostream>
+#include <math.h>
 using namespace std;
-int Maxima(int first,int secon) {
-    while (first<secon) {
-        return secon;
 
-
-    }
-    while (first>secon) {
-        return first;
-    }
+double squre_root(int digits,double power=0.5) {
+    return pow(digits,power);
 }
 
-
 int main() {
-    int a,b;
-    cout<<"enter 2 digits to chect maxima and minima :"<<endl;
-    cin>>a>>b;
-    int maxima=Maxima(a,b);
-    cout<<maxima;
+    double result=squre_root(10);
+    cout<<result<<endl;
+
 
 
     return 0;
