@@ -1,7 +1,14 @@
 #include <iostream>
 using namespace std;
 int Maxima(int first,int secon) {
-    return (first>secon)?first:secon;
+    while (first<secon) {
+        return secon;
+
+
+    }
+    while (first>secon) {
+        return first;
+    }
 }
 
 
