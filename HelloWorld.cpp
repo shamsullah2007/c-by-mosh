@@ -4,12 +4,17 @@
 using namespace std;
 
 double squre_root(int digits,double power=0.5) {
-    return pow(digits,power);
+    if (digits<0) {
+        cout<<pow(digits,power)<<"i";
+    }
+    else
+        cout<<pow(-digits,power);
 }
 
 int main() {
-    double result=squre_root(10);
-    cout<<result<<endl;
+    unsigned int kamla=-10;
+    cout<<squre_root(kamla);
+
 
 
 
