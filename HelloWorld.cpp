@@ -1,10 +1,17 @@
 #include <iostream>
 using namespace std;
-int main() {
-    for (int x =0;x<10;x++) {
-        for (int y=0;y<10;y++) {
-            cout<<"("<<x<<","<<y<<")";
-        }
+int Maxima(int first,int secon) {
+    return (first>secon)?first:secon;
+}
 
-    }
+
+int main() {
+    int a,b;
+    cout<<"enter 2 digits to chect maxima and minima :"<<endl;
+    cin>>a>>b;
+    int maxima=Maxima(a,b);
+    cout<<maxima;
+
+
+    return 0;
 }
