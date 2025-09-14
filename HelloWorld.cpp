@@ -1,19 +1,14 @@
-#include <cmath>
 #include <iostream>
-#include <math.h>
 using namespace std;
-// Passing an argument by reference means the function can modify
-// the variable in the main function directly, since it works on the original.
-
-void numspace(double& price) {
-    price*=1.2;
-
+void sftring(const string& s){
+    s;
+    cout<<s<<endl;
+    s="shdkf";
 }
 int main() {
-    double price=100;
-    cout<<price<<endl;
-    numspace(price);
-    cout<<price<<endl;
-    cout<<price<<endl;
+    string sum="shams";
+    sftring(sum);
+    cout<<sum<<endl;
     return 0;
+
 }
