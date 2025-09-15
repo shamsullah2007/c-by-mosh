@@ -1,16 +1,18 @@
 #include <iostream>
 using namespace std;
-void calculateTax(double sale);//this is declaration of fuction that tells the compiler hey ther is function of the and the perameters
+
+#include  "utils/header.h"
+#include  "utils/header.h"
+using cct::calculateTax,cct::oddNumber;
+
 int main() {
     double sale=10000;
-
     calculateTax(sale);
     cout<<sale;
+    oddNumber(sale);
 
 }
-const double taxrate=0.5;
+
 // this is the definition of function the actual function
-void calculateTax(double sale) {
-    cout<<taxrate*sale<<endl;
-}
+
 
