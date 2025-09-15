@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
-void sftring(const string& s){
-    s;
-    cout<<s<<endl;
-    s="shdkf";
+const double taxrate=0.5;
+void calculateTax(double sale) {
+    cout<<taxrate*sale<<endl;
 }
 int main() {
-    string sum="shams";
-    sftring(sum);
-    cout<<sum<<endl;
-    return 0;
+    double sale=10000;
+    
+    calculateTax(sale);
+    cout<<sale;
 
 }
+
