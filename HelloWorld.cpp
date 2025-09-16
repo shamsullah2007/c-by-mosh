@@ -4,14 +4,22 @@ using namespace std;
 
 int main() {
     int array[] = {0,1,2,3,4,5,6,7,8,9};
-    int second[size(array)];   // use std::size here
+    int array_size []= {0,1,8,3,4,5,6,7,8,9};
+    bool equal = true;
+    for(int i=0;i<sizeof(array)/sizeof(int);i++) {
+        if (array[i] != array_size[i]) {
+            equal = false;
 
-    for (int i = 0; i < size(array); i++) {
-        second[i] = array[i];
+            break;
+
+        }
+
+        }
+    if (equal) {
+        cout<<boolalpha<<equal<<endl;
     }
-
-    for (int i = 0; i <size(array); i++) { // must use array, not second
-        cout << second[i] << endl;
+    else {
+        cout<<boolalpha<<equal<<endl;
     }
 
     return 0;
