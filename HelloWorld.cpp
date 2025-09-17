@@ -1,31 +1,24 @@
 #include <iostream>
 #include <iterator> // for std::size
 using namespace std;
-int main() {
-    int number;
-    cout<<"enter a number to check it is prime or not"<<endl;
-    cin>>number;
-    bool isPrime=true;
-    if (number<=1){
-        cout<<number<<" is not prime"<<endl;
-        isPrime=false;
-}
-    else {
-        for(int i=2;i<number;i++) {
-            if(number%i==0) {
-                isPrime=false;
-                break;
+void diamenarray(int matrix[][2][3] ,int size) {
+    for (int lay=0;lay<size;lay++) {
+        for (int row=0;row<2;row++) {
+            for (int col=0;col<3;col++) {
+                cout <<matrix[lay][row][col] << " ";
+
             }
-
-
+            cout<<endl;
         }
     }
-    if(isPrime) {
-        cout<<"yes"<<endl;
-    }
-    else
-        cout<<"no"<<endl;
-
+}
+int main() {
+    int matrix[3][2][3]={
+        {{22,34,56},{12,34,56}},
+        {{22,34,56},{12,34,56}},
+          {{22,34,56},{12,34,56}}
+    };
+    diamenarray(matrix,3);
 
     return 0;
 }
