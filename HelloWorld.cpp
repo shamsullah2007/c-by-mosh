@@ -2,22 +2,26 @@
 #include <iterator> // for std::size
 using namespace std;
 int main(){
-    // pointer is a veriable that holds the addrees of another veriabel {type*} and we have to initialize it must
-    int number=40;
-    // this pointer
-    int* pointer=&number;
-    //de refrencing(indirection) through this we go to the address and pick the value
-    *pointer=100;
-    cout<<*pointer;
+    //senerio where data is constant and pointer is not
+    const int x=100;
+    const int* p=&x;
+    int y=200;
+    p=&y;
+    cout<<*p<<endl;
+    // in this senerio pointer is constant
+    int y1=3444;
+    int* const p1=&y1;
+    *p1=200000;
+    int x1=3434;
+    cout<<*p1<<endl;
 
-    int x=23;
-    int y=100;
-    int* ptr=&x;
-    *ptr*=100;
-    cout<<*ptr;
-    ptr=&y;
-    *ptr*=100;
-    cout<<*ptr;
+    // senerio wher both are constant
+    const int d=7474;
+    const int* const p2=&d;
+    cout<<*p2<<endl;
+
+
+
 
     return 0;
 
