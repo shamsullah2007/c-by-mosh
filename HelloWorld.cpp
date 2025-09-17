@@ -1,28 +1,31 @@
 #include <iostream>
 #include <iterator> // for std::size
 using namespace std;
-void swap(int arr[],int i,int j) {
-    int temp=arr[i];
-    arr[i]=arr[j];
-    arr[j]=temp;
-
-
-}
-void sorting(int arr[],int size) {
-    for (int j=0;j<size;j++)
-        t {
-            if (arr[i] < arr[i - 1]) {
-                swap(arr, i, i - 1);
-
-            }
-    }
-}
 int main() {
-    int array[]={2,1,6,5,9,8,0,10,99,87,65};
-    sorting(array,size(array));
-    for (int i = 0; i < size(array); i++) {
-        cout<<array[i]<<"\n";
+    int number;
+    cout<<"enter a number to check it is prime or not"<<endl;
+    cin>>number;
+    bool isPrime=true;
+    if (number<=1){
+        cout<<number<<" is not prime"<<endl;
+        isPrime=false;
+}
+    else {
+        for(int i=2;i<number;i++) {
+            if(number%i==0) {
+                isPrime=false;
+                break;
+            }
+
+
+        }
     }
+    if(isPrime) {
+        cout<<"yes"<<endl;
+    }
+    else
+        cout<<"no"<<endl;
+
 
     return 0;
 }
