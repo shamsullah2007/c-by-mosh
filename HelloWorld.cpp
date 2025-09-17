@@ -1,26 +1,14 @@
 #include <iostream>
 #include <iterator> // for std::size
 using namespace std;
-
 int main() {
-    int array[] = {0,1,2,3,4,5,6,7,8,9};
-    int array_size []= {0,1,8,3,4,5,6,7,8,9};
-    bool equal = true;
-    for(int i=0;i<sizeof(array)/sizeof(int);i++) {
-        if (array[i] != array_size[i]) {
-            equal = false;
+    int arrays[10]={1,2,3,4,5,6,7,8,9};
+    //unpacking : in c++ you need to know the exect size of arry you don't do partial unpacking
+    auto [x,y,z,d,g,h,j,e,r,t]=arrays;
+    cout<<"x:"<<x<<endl;
+    cout<<"y:"<<y<<endl;
+    cout<<"z:"<<z<<endl;
 
-            break;
-
-        }
-
-        }
-    if (equal) {
-        cout<<boolalpha<<equal<<endl;
-    }
-    else {
-        cout<<boolalpha<<equal<<endl;
-    }
 
     return 0;
 }
