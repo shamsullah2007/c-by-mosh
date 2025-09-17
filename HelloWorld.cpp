@@ -1,24 +1,27 @@
 #include <iostream>
 #include <iterator> // for std::size
 using namespace std;
-void diamenarray(int matrix[][2][3] ,int size) {
-    for (int lay=0;lay<size;lay++) {
-        for (int row=0;row<2;row++) {
-            for (int col=0;col<3;col++) {
-                cout <<matrix[lay][row][col] << " ";
+int main(){
+    // pointer is a veriable that holds the addrees of another veriabel {type*} and we have to initialize it must
+    int number=40;
+    // this pointer
+    int* pointer=&number;
+    //de refrencing(indirection) through this we go to the address and pick the value
+    *pointer=100;
+    cout<<*pointer;
 
-            }
-            cout<<endl;
-        }
-    }
-}
-int main() {
-    int matrix[3][2][3]={
-        {{22,34,56},{12,34,56}},
-        {{22,34,56},{12,34,56}},
-          {{22,34,56},{12,34,56}}
-    };
-    diamenarray(matrix,3);
+    int x=23;
+    int y=100;
+    int* ptr=&x;
+    *ptr*=100;
+    cout<<*ptr;
+    ptr=&y;
+    *ptr*=100;
+    cout<<*ptr;
 
     return 0;
+
+
+
+
 }
