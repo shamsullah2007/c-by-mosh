@@ -4,39 +4,42 @@ using namespace std;
 //arithemetics with pointers
 
 int main(){
+    int cap=10;
+    int* numbers=new int[cap];
 
-    int* arr=new int[4];
-    arr[0]=1;
-    arr[1]=2;
-    arr[2]=3;
-    arr[3]=4;
 
-   int* tem=new int[7];
-    for (int i=0;i<4;i++) {
-        tem[i]=arr[i];
+    int entries=0;
+    while (true) {
+        cout<<"Enter numbers: ";
+        cin>>numbers[entries];
+
+        if (cin.fail()) {
+            break;
+
+        }
+        entries++;
+        if (entries==10) {
+            int newCap=cap*10;
+            int* temp=new int[newCap];
+            for (int i=0;i<entries;i++) {
+                temp[i]=numbers[i];
+            }
+            delete[] numbers;
+            numbers=temp;
+            cap=newCap;
+        }
+
+
     }
-    delete[] arr;
-    tem[4]=5;
-    tem[5]=6;
-    tem[6]=7;
-    for (int i=0;i<7;i++) {
-        cout<<tem[i]<<" ";
+    for (int i=0; i<entries; i++) {
+        cout<<numbers[i]<<" ";
+
     }
-
-
-
-
-
-
-
-
-
+    cout<<endl;
+    delete[] numbers;
 
 
 
     return 0;
-
-
-
 
 }
