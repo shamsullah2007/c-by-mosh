@@ -4,16 +4,26 @@ using namespace std;
 //arithemetics with pointers
 
 int main(){
-    int a=45;
-    int b=59;
-    int* p1=&a;
-    int* p2=&b;
-    cout<<boolalpha<<(p1==p2)<<endl;
-    cout<<boolalpha<<(p1>p2)<<endl;
 
-    int numbers[]={1,2,3,4,5,6,7,8,9};
-    int* ptr=numbers;
-    cout<<boolalpha<<(ptr[4]>=ptr[1])<<endl;
+    int* arr=new int[4];
+    arr[0]=1;
+    arr[1]=2;
+    arr[2]=3;
+    arr[3]=4;
+
+   int* tem=new int[7];
+    for (int i=0;i<4;i++) {
+        tem[i]=arr[i];
+    }
+    delete[] arr;
+    tem[4]=5;
+    tem[5]=6;
+    tem[6]=7;
+    for (int i=0;i<7;i++) {
+        cout<<tem[i]<<" ";
+    }
+
+
 
 
 
