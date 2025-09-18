@@ -1,42 +1,36 @@
 #include <iostream>
 #include <iterator> // for std::size
+#include <memory>
 using namespace std;
 //arithemetics with pointers
-
 int main(){
-    int cap=10;
-    int* numbers=new int[cap];
+//  we have two types of pointer from previnting data leek
+/*unique pointer
+ *the pointer only locate to one memory address and the other pointer cannot alocate to the same memory address
+ */
+    auto x=make_unique<int>(10);
+    // auto y=make_unique<int[]>(20);
+
+    unique_ptr<int>z(new int(5));
+    
 
 
+    unique_ptr<int[]>y(new int[20]);
     int entries=0;
     while (true) {
-        cout<<"Enter numbers: ";
-        cin>>numbers[entries];
-
-        if (cin.fail()) {
-            break;
-
-        }
+        cin>>y[entries];
+        if (cin.fail()){break;}
         entries++;
-        if (entries==10) {
-            int newCap=cap*10;
-            int* temp=new int[newCap];
-            for (int i=0;i<entries;i++) {
-                temp[i]=numbers[i];
-            }
-            delete[] numbers;
-            numbers=temp;
-            cap=newCap;
-        }
-
-
     }
-    for (int i=0; i<entries; i++) {
-        cout<<numbers[i]<<" ";
-
+    for (int i=0;i<entries;i++) {
+        cout<<y[i]<<endl;
     }
-    cout<<endl;
-    delete[] numbers;
+
+
+
+
+    cout<<*x<<endl;
+
 
 
 
