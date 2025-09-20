@@ -1,28 +1,37 @@
 #include <iostream>
 using namespace std;
-void tolowercase(string &cus,int size) {
-    for (char c=0;c<size;c++) {
-        cus[c]=tolower(cus[c]);
+string islowercase(string &cus,int size=8) {
+    for (int i = 0; i < size; i++) {
+        cus[i] = tolower(cus[i]);
     }
+    return cus;
+
 }
-void isvalidate(string cus) {
-    tolowercase(cus,size(cus));
-    while (true){
-        if (cus=="0987ab") {
-            cout<<cus<<endl;
-            break;
-        }
-        else {
-            cout<<"try again"<<endl;
-            cin>>cus;
-            tolowercase(cus,size(cus));
+bool isvalidate(string cus) {
+    islowercase(cus);
+    if (cus.length()!=9 ) {
+        return false;
+
+    }
+    for (int i=0;i<cus.length()-5;i++) {
+        if (!isalpha(cus[i])) {
+            return false;
+
         }
     }
+    for (int i=4;i<cus.length();i++) {
+        if (!isdigit(cus[i])) {
+            return false;
+        }
+    }
+    
+    return true;
 }
+
 int main() {
-    string customer;
-    cin>>customer;
-    isvalidate(customer);
+    string customer ="abcd00978";
+    bool returning=isvalidate(customer);
+    cout<<returning<<endl;
     return 0;
 
 }
