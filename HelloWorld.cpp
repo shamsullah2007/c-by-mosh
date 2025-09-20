@@ -1,14 +1,28 @@
 #include <iostream>
 using namespace std;
+void tolowercase(string &cus,int size) {
+    for (char c=0;c<size;c++) {
+        cus[c]=tolower(cus[c]);
+    }
+}
+void isvalidate(string cus) {
+    tolowercase(cus,size(cus));
+    while (true){
+        if (cus=="0987ab") {
+            cout<<cus<<endl;
+            break;
+        }
+        else {
+            cout<<"try again"<<endl;
+            cin>>cus;
+            tolowercase(cus,size(cus));
+        }
+    }
+}
 int main() {
-    string name="shams ullah son of ,zarghon shah";
-    string firstName=name.substr(0,name.find(" "));
-    string lastname=name.substr(name.find(" ")+1,name.find(" "));
-    string fatherfirstName=name.substr(name.find_first_of(",")+1,name.find(" ")+2);
-    string fatherlastname=name.substr(name.rfind(" ")+1,4);
+    string customer;
+    cin>>customer;
+    isvalidate(customer);
+    return 0;
 
-    cout<<firstName<<" ";
-    cout<<lastname<<endl;
-    cout<<fatherfirstName<<" ";
-    cout<<fatherlastname<<endl;
 }
