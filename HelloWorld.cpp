@@ -1,22 +1,21 @@
-#include  <iostream>
+#include <iostream>
+#include <thread>
+#include <chrono>
 using namespace std;
-// why string conversion: is for reading data from the user or terminal and do mathimatical operations on it so it takes any thing from the user it is in the form of strings so we have to convert is explicitly into other data types on which work with
-void typeconversion(const string &age1,const string &age2) {
-    int age3=stoi(age1);
-    int age4=stoi(age2);
-    cout<<age3<<" "<<age4<<endl;
+using namespace this_thread;
+using namespace chrono;
 
-}
 int main() {
-    string age1;
-    string age2;
-    cin >> age1 >> age2;
-    typeconversion(age1,age2);
-    cout<<age1+age2<<endl;
-
-
-
-
-
+    auto start=high_resolution_clock::now();
+    int num_iterations =0;
+    for (int i = 0; i <= 100; i += 5) {
+        cout << "Downloading: " << i << "%\r";  // \r moves cursor back
+        sleep_for(milliseconds(1000)); // wait 0.5 sec
+        num_iterations++;
+    }
+    cout << endl << "Download Complete! in nubers of :" <<num_iterations<< endl;
+    auto end=high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end-start);
+    cout <<"task completed in "<< duration.count() << " ms" << endl;
     return 0;
 }
