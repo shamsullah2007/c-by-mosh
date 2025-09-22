@@ -12,7 +12,7 @@ struct CustUmer {
     };
 
 int main() {
-    CustUmer cust;
+    CustUmer cust; // we make an instance of the custUmer so we can get the data type inside of it by .
     cout<<"enter your id# ";
     cin>>cust.id;
     cout<<"enter your name# ";
