@@ -7,24 +7,31 @@ using namespace this_thread;
 using namespace chrono;
 
 // structere is know as struct is custom data types made by the programer for complex calculation and so can be used in every functions
+struct address {
+    string email;
+    string city="bannu";
+    string state="kpk";
+    string country="pakistan";
+    int postal_code;
+};
 struct CustUmer {
     int id=0;
     string name;
-    string address="shamsullajdjfdlkfja;";
+    address address;
     };
 
 int main() {
     auto st3 = high_resolution_clock().now();
-    vector<CustUmer> custumers;
-    // CustUmer custumer={5,"shamsullah"};
-    // CustUmer custumer2={10,"shamsulla"};
-    custumers.push_back({5,"shamsullah"});
-    custumers.push_back({10,"shamsulla"});
+    CustUmer custumers{5,"shamsullah", {    "shamsullah@gmail.com",
+        "bannu","kpk","pakistan",45}};
 
-    for (const auto& ids: custumers) {
-        cout<<ids.name<<endl;
+    cout << custumers.id << endl<<custumers.name << endl<<custumers.address.city<<endl<<custumers.address.country<<endl;
 
-    }
+
+
+
+
+
     auto end=high_resolution_clock().now();
     int duration = duration_cast<microseconds>(end-st3).count();
     cout<<duration<<endl;
