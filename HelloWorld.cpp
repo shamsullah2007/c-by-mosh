@@ -4,18 +4,22 @@
 using namespace std;
 using namespace this_thread;
 using namespace chrono;
+// structere is know as struct is custom data types made by the programer for complex calculation and so can be used in every functions
+struct CustUmer {
+    int id;
+    string name;
+    string address;
+    };
 
 int main() {
-    auto start=high_resolution_clock::now();
-    int num_iterations =0;
-    for (int i = 0; i <= 100; i += 5) {
-        cout << "Downloading: " << i << "%\r";  // \r moves cursor back
-        sleep_for(milliseconds(1000)); // wait 0.5 sec
-        num_iterations++;
-    }
-    cout << endl << "Download Complete! in nubers of :" <<num_iterations<< endl;
-    auto end=high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(end-start);
-    cout <<"task completed in "<< duration.count() << " ms" << endl;
+    CustUmer cust;
+    cout<<"enter your id# ";
+    cin>>cust.id;
+    cout<<"enter your name# ";
+    cin>>cust.name;
+    cout<<"enter your address# ";
+    cin>>cust.address;
+    cout<<cust.id<<endl<<cust.name<<endl<<cust.address;
+
     return 0;
 }
