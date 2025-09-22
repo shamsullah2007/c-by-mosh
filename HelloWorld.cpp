@@ -24,9 +24,14 @@ int main() {
     auto st3 = high_resolution_clock().now();
     CustUmer custumers{5,"shamsullah", {    "shamsullah@gmail.com",
         "bannu","kpk","pakistan",45}};
+    CustUmer custumers2{5,"shamsullah", {    "shamsullah@gmail.com",
+        "bannu","kpk","pakistan",45}};
+    if (custumers.id==custumers2.id,
+        custumers.name==custumers2.name,
+        custumers.address.city==custumers2.address.city) {
+        cout<<"equal"<<endl;
 
-    cout << custumers.id << endl<<custumers.name << endl<<custumers.address.city<<endl<<custumers.address.country<<endl;
-
+    }
 
 
 
