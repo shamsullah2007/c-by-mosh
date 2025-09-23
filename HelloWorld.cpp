@@ -19,20 +19,18 @@ struct CustUmer {
     string name;
     address address;
     string job = "kota karahi";
-    bool equal(CustUmer custumers2) {
-        if (id==custumers2.id &&
-        name==custumers2.name &&
-        address.city==custumers2.address.city&&
-        job==custumers2.job)
-            return true;
-        else
-
-            return  false;
+    };
+    bool operator==(const CustUmer & custumers, const CustUmer& custumers2) {
+        return (custumers.id==custumers2.id &&
+        custumers.name==custumers2.name &&
+        custumers.address.city==custumers2.address.city&&
+        custumers.job==custumers2.job);
+    }
+    ostream& operator<<(ostream& stream,CustUmer& custumer) {
+        stream<<custumer.name;
+        return stream;
     }
 
-
-
-    };
 
 int main() {
     auto st3 = high_resolution_clock().now();
@@ -40,9 +38,10 @@ int main() {
         "bannu","kpk","pakistan",45},"gaday ka kam kertay hat"};
     CustUmer custumers2{5,"shamsullah", {    "shamsullah@gmail.com",
         "bannu","kpk","pakistan",45,},"gaday ka kam kertay hat"};
-    if (custumers.equal(custumers2)) {
+    if (custumers==custumers2) {
         cout<<"equal"<<endl;
     }
+        cout<<custumers<<endl;
 
         auto end=high_resolution_clock().now();
         int duration = duration_cast<microseconds>(end-st3).count();
