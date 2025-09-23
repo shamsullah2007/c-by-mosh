@@ -25,11 +25,24 @@ ostream& operator<<(ostream& stream, const point& p) {
 }
 
 
+point getPoint() {
+    point pt={34,43};
+    return pt;
+
+}
+void showPoint(point& point) {
+    cout<<point.x<<endl;
+}
+
+
 int main() {
     auto st3 = high_resolution_clock().now();
     point p{45,45};
     point p1{45,45};
-    if (p==p1){
+    auto point1 = getPoint();
+    showPoint(point1);
+
+    if  (p==p1){
         cout<<"equal"<<endl;
 
     }
