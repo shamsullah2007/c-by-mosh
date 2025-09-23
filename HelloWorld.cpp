@@ -1,57 +1,32 @@
 #include <iostream>
-#include <thread>
-#include <chrono>
-#include <vector>
 using namespace std;
-using namespace this_thread;
-using namespace chrono;
+struct Movie {
+    string name;
+    string address;
+    int year;
 
-// structere is know as struct is custom data types made by the programer for complex calculation and so can be used in every functions
-struct point {
-    int x;
-    int y;
 };
-bool operator==(const point &a, const point &b) {
-    if (a.x==b.x && a.y==b.y)
-        return true;
-    else
-    {
-        return  false;
-    }
-}
-ostream& operator<<(ostream& stream, const point& p) {
-    stream<<"("<<p.x<<","<<p.y<<")";
-    return stream;
-}
-
-
-point getPoint() {
-    point pt={34,43};
-    return pt;
+ostream& operator<<(ostream& os, const Movie& movie) {
+    os<<movie.name<<" "<<movie.address<<" "<<movie.year;
 
 }
-void showPoint(point& point) {
-    cout<<point.x<<endl;
+Movie getMovie() {
+    Movie movie;
+    return movie;
 }
+void showMovie(Movie* movie) {
+    cout<<"Movie Name: "<<(*movie).name<<"  movie address  "<<movie->address<<endl;// you have to use pointer destructing because it is just an address so it don't have access to the mamber of the structure
+}
+
 
 
 int main() {
-    auto st3 = high_resolution_clock().now();
-    point p{45,45};
-    point p1{45,45};
-    auto point1 = getPoint();
-    showPoint(point1);
-
-    if  (p==p1){
-        cout<<"equal"<<endl;
-
-    }
-    cout<<p<<endl;
+    Movie movie{"shams","kotka muhammad shah",1947};
+    // cout<<movie<<endl;
+    showMovie(&movie);
 
 
 
-        auto end=high_resolution_clock().now();
-        int duration = duration_cast<microseconds>(end-st3).count();
-        cout<<duration<<endl;
-        return 0;
-    }
+
+
+}
