@@ -4,28 +4,14 @@
 #include <vector>
 using namespace std;
 
-struct Movie {
-    int id;
-    string title;
-    int year;
-};
 int main() {
-    // READING FORM A FILE
-    ifstream file;
-    file.open("hello.csv");
+    // the mean of writing to bionery file is like image stores and videos or for keeping recorses
+    int numbers[]={1000000,2000000,3000000};
+    ofstream file("numbers.bin",ios::binary);
     if (file.is_open()) {
-        while (!file.eof()) {
-            string line;
-            getline(file, line,',');
-            if (line.empty()){continue;}// if there is empty line or string we should skip it and move to the next iteration
-            Movie movie;
-            movie.id = stoi(line);
-            getline(file, line,',');
-            movie.title = line;
-            getline(file, line);
-            movie.year = stoi(line);
-            cout <<movie.title << endl;
-        }
+        // char* is the address of the part of memory we wanna write to the dist or bin
+        file.write(reinterpret_cast<char*>(numbers),sizeof(numbers));
+        file.close();
 
     }
 }
