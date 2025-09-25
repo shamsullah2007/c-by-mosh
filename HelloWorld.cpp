@@ -1,36 +1,26 @@
 #include <iostream>
 #include <limits>
 using namespace std;
-int main() {
-    // while reading data from a consol or file a temprary storage is make in the memory called buffer
-    //[]
-    int a;
-    int  b;
+int Number(const string& prompt) {
+    int number;
+
     while (true) {
-        cout<<"first: ";
-        cin >> a;
+        cout<<prompt<<endl;
+        cin>>number;
         if (cin.fail()) {
-            cout<<"error"<<endl;
+            cout<<"invalid input"<<endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
         else break;
-
-
-    }  while (true) {
-        cout<<"second: ";
-        cin >> b;
-        if (cin.fail()) {
-            cout<<"error"<<endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
-        else break;
-
-
-
     }
-    cout<<a<<b<<endl;
+    return number;
+}
+int main() {
+     int first=Number("first");
+    int second=Number("second");
+
+    // cout<<first<<second<<endl;
     return 0;
 
 }
