@@ -3,15 +3,25 @@
 #include <iomanip>
 #include <vector>
 using namespace std;
+struct movie {
+    int id;
+    string name;
+    int year;
+};
 
 int main() {
-    // the mean of writing to bionery file is like image stores and videos or for keeping recorses
-    int numbers[]={1000000,2000000,3000000};
-    ofstream file("numbers.bin",ios::binary);
+    // int numbers[3];
+   ifstream file;
+    file.open("numbers.bin", ios::binary);
     if (file.is_open()) {
-        // char* is the address of the part of memory we wanna write to the dist or bin
-        file.write(reinterpret_cast<char*>(numbers),sizeof(numbers));
-        file.close();
-
+        // if you dont know the exect number of digits in the binory file
+        int number;
+        while (file.read(reinterpret_cast<char*>(&number), sizeof(number))){
+            cout << number << endl;
+        }
+        // if you know exect number of number in the file
+        // file.read(reinterpret_cast<char*>(&numbers), sizeof(numbers));
+        // cout << numbers[0] << " " << numbers[1] << " " << numbers[2] << endl;
+        // file.close();
     }
 }
