@@ -10,24 +10,20 @@ struct movie {
     string name;
     int year;
 };
+string convert(const double &num , int precision) {
+    stringstream ss;
+    ss<<fixed<<setprecision(precision)<<num<<endl;
+    return ss.str();
 
+}
 
 int main() {
-  fstream file;
-    file.open("hello.txt", ios::in|ios::out|ios::app);
-    if (file.is_open()) {
-        string line;
-
-        // file<<"this is not what are you thinking about\n";
-        // file<<"this is not what are you thinking about\n";
-        // file<<"this is not what are you thinking about\n";
-        while (!file.eof()) {
-            getline(file,line , ' ');
-            cout<<line<<endl;
-
-        }
+    double num=50.5787;
+    int precision=2;
+    string name=convert(num,precision);
+    cout<<name<<endl;
 
 
 
-    }
+
 }
