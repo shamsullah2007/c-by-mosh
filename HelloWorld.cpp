@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iomanip>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 struct movie {
@@ -10,20 +11,22 @@ struct movie {
     int year;
 };
 
+
 int main() {
-   vector<int> movies;
-    ifstream myfile;
-    myfile.open("numbers.bin",ios::binary);
-    if (myfile.is_open()){
-        int n;
-        while (myfile.read(reinterpret_cast<char*>(&n),sizeof(n))) {
-            movies.push_back(n);
-            cout << n << endl;
+  fstream file;
+    file.open("hello.txt", ios::in|ios::out|ios::app);
+    if (file.is_open()) {
+        string line;
+
+        // file<<"this is not what are you thinking about\n";
+        // file<<"this is not what are you thinking about\n";
+        // file<<"this is not what are you thinking about\n";
+        while (!file.eof()) {
+            getline(file,line , ' ');
+            cout<<line<<endl;
 
         }
-        cout<<movies[0]<<endl;
 
-        myfile.close();
 
 
     }
