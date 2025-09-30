@@ -5,15 +5,19 @@
 #include "Rectangle.h"
 #include <iostream>
 using namespace std;
-void Rectangle::draw(int x,int y) {
-    width=x;
-    height=y;
-    cout<<"width:"<<width<<endl<<"height:"<<height<<endl;
+int Rectangle::getwidth() {
+   return width;
 }
 // this is definition of the function
 
-int Rectangle::area(int x,int y) {
-    width=x;
-    height=y;
-    return x * y;
+void Rectangle::setwidth(int width) {
+   if (width<0)
+      throw invalid_argument("width cannot be negative");
+   this->width = width;
+}
+int Rectangle::getheight() {
+   return height;
+}
+void Rectangle::setheight(int height) {
+   (*this).height = height;
 }

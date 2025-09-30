@@ -8,10 +8,13 @@
 
 class Rectangle {
     public:
+   int getwidth();
+    void setwidth(int width);
+    int getheight();
+    void setheight(int height);
+    private:
     int width;
     int height;
-    void draw(int x,int y);//this is decleration of a function
-    int area(int x,int y);
 
 
 };

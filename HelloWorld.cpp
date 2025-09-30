@@ -3,9 +3,10 @@
 #include  <iostream>
 using namespace std;
 int main() {
-    Rectangle first;
-    first.width=5;
-    first.height=5;
-    cout<<  first.area(5,5);
-    // Rectangle second;
+   Rectangle rect;
+   cout<<rect.getheight();
+   rect.setwidth(10);
+   cout<<rect.getwidth();
+   rect.setheight(10);
+   cout<<rect.getheight();
 }
