@@ -1,12 +1,8 @@
-#include  "Rectangle.h"
-#include  "Rectangle.h"
-#include  <iostream>
+#include "Return_String.h"
+#include <iostream>
 using namespace std;
 int main() {
-   Rectangle rect;
-   cout<<rect.getheight();
-   rect.setwidth(10);
-   cout<<rect.getwidth();
-   rect.setheight(10);
-   cout<<rect.getheight();
+    Return_String Return_String;
+    Return_String.setName("Hello World");
+    cout<<Return_String.getName();
 }
