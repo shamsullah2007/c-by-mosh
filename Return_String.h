@@ -7,13 +7,17 @@
 #include <string>
 using namespace std;
 
-class Return_String {
-    string name;
+class REctangle {
     public:
-    string getName();
-    void setName(const string& nnn);
+    REctangle(int width, int hight);
 
-
+    int getwidth();
+    void setwidth(int width);
+    int gethight();
+    void sethight(int hight);
+private:
+    int hight;
+    int width;
 };
 
 
