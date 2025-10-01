@@ -11,7 +11,9 @@ class REctangle {
     public:
     // just like function overloading we have contructor overloading as well
     REctangle()=default;
+    REctangle(int width);
     REctangle(int width, int hight);
+    REctangle(int width, int hight,const string &text);
 
     int getwidth();
     void setwidth(int width);
@@ -20,6 +22,7 @@ class REctangle {
 private:
     int hight;
     int width;
+    string text;
 };
 
 

@@ -4,21 +4,28 @@
 
 #include "Return_String.h"
 #include <iostream>
+#include "Textbox.h"
 using namespace std;
 
 #include <stdexcept>
 
+
+
+REctangle::REctangle(int width) : REctangle(width,0) {
+    cout<< "this is 4 perama contructor deligations\n";
+}
 int REctangle::getwidth() {
     if (width<0)
        throw invalid_argument("Invalid Input");
     return width;
 }
+
 void REctangle::setwidth(int width) {
     this->width = width;
 }int REctangle::gethight() {
     if (hight<0)
        throw invalid_argument("Invalid Input");
-    return width;
+    return hight;
 }
 void REctangle::sethight(int hight) {
     this->hight = hight;
@@ -27,8 +34,14 @@ REctangle::REctangle(int width, int hight) /*: width(width), hight(hight)  this 
     setwidth(width);
     sethight(hight);
 
-    cout<<"THIS THE CONSTRUCTOR";
+    cout<<"THIS is 2 CONSTRUCTOR"<<endl;
  }
+REctangle::REctangle(int width, int hight, const string &text): REctangle(width, hight) {
+    (*this).text=text;
+    cout<< "this is 3 perama contructor deligations\n";
+
+}
+
 // REctangle::REctangle() {
 //
 // }
