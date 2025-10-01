@@ -9,6 +9,8 @@ using namespace std;
 
 class REctangle {
     public:
+    // just like function overloading we have contructor overloading as well
+    REctangle()=default;
     REctangle(int width, int hight);
 
     int getwidth();

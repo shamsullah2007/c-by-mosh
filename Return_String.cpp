@@ -28,4 +28,9 @@ REctangle::REctangle(int width, int hight) /*: width(width), hight(hight)  this 
     sethight(hight);
 
     cout<<"THIS THE CONSTRUCTOR";
-}
+ }
+// REctangle::REctangle() {
+//
+// }
+// this is default constructor if you need to have default one as the compiler dont make it for you as you have already a
+// constructor so yoou have to make it by default

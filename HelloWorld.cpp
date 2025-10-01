@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     auto start = chrono::high_resolution_clock::now();
 
-    REctangle Return_String(34,23);
+    REctangle Return_String;
     // Return_String.sethight(10);
     // cout<<Return_String.gethight();
     cout << Return_String.getwidth() << endl;
