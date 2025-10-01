@@ -23,8 +23,9 @@ void REctangle::setwidth(int width) {
 void REctangle::sethight(int hight) {
     this->hight = hight;
 }
-REctangle::REctangle(int width, int hight) {
+REctangle::REctangle(int width, int hight) /*: width(width), hight(hight)  this are called member veriable initialization but this is not excclusive and but because of it we loose our velidation*/ {
     setwidth(width);
     sethight(hight);
+
     cout<<"THIS THE CONSTRUCTOR";
 }
