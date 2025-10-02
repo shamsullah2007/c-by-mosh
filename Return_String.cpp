@@ -8,7 +8,13 @@
 using namespace std;
 
 #include <stdexcept>
-
+// REctangle::REctangle(const REctangle& source) {
+//     this->width=source.width;
+//     this->hight=source.hight;
+//     this->text=source.text;
+//     cout<<"copy constructor"<<endl;
+//
+// }this is definition of the copy constructor
 
 
 REctangle::REctangle(int width) : REctangle(width,0) {
@@ -35,10 +41,12 @@ REctangle::REctangle(int width, int hight) /*: width(width), hight(hight)  this 
     sethight(hight);
 
     cout<<"THIS is 2 CONSTRUCTOR"<<endl;
+    cout<<"this is source constructor"<<endl;
  }
 REctangle::REctangle(int width, int hight, const string &text): REctangle(width, hight) {
     (*this).text=text;
     cout<< "this is 3 perama contructor deligations\n";
+    cout<<"source construtor";
 
 }
 

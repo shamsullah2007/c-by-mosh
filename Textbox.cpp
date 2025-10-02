@@ -6,5 +6,7 @@
 #include <string>
 
 Textbox::Textbox(const string& name):name(name) {
-
+}
+string Textbox::getText() {
+    return name;
 }

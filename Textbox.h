@@ -12,7 +12,7 @@ class Textbox {
     public:
     Textbox()=default;
 
-    explicit Textbox(const string& name);
+    Textbox(const string& name);
     string getText();
     void setText(string name);
 private:

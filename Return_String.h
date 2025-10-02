@@ -11,6 +11,8 @@ class REctangle {
     public:
     // just like function overloading we have contructor overloading as well
     REctangle()=default;
+    // if we remove this line the compiler automatically generate the copy constructor for us but we don't want it right
+    REctangle(const REctangle& source)=delete;//some time we wanna the source object is not copied while passing it by value we have to delete the copy constructor and as well as it definition
     REctangle(int width);
     REctangle(int width, int hight);
     REctangle(int width, int hight,const string &text);
