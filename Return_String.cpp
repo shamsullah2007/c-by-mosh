@@ -16,10 +16,8 @@ using namespace std;
 //
 // }this is definition of the copy constructor
 
+int REctangle::Objcount=0;
 
-REctangle::REctangle(int width) : REctangle(width,0) {
-    cout<< "this is 4 perama contructor deligations\n";
-}
 int REctangle::getwidth() {
     if (width<0)
        throw invalid_argument("Invalid Input");
@@ -40,6 +38,8 @@ REctangle::REctangle(int width, int hight) /*: width(width), hight(hight)  this 
     setwidth(width);
     sethight(hight);
 
+    Objcount++;
+
     cout<<"THIS is 2 CONSTRUCTOR"<<endl;
     cout<<"this is source constructor"<<endl;
  }
@@ -49,6 +49,13 @@ REctangle::REctangle(int width, int hight, const string &text): REctangle(width,
     cout<<"source construtor";
 
 }
+int REctangle::getobject() {
+    return Objcount;
+}
+REctangle::~REctangle() {
+    cout<<"this is perama destructor"<<endl;
+}
+
 
 // REctangle::REctangle() {
 //

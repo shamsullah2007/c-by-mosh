@@ -18,6 +18,8 @@ void showRectangl(REctangle& rectangle) {
 int main() {
     auto start = chrono::high_resolution_clock::now();
        REctangle first{25,30};
+       REctangle second{25,30};
+       cout<<REctangle::getobject()<<endl;
        //showRectangl(first);//here it say you are calling the deleted copy constructor
          // REctangle second=first;
 
