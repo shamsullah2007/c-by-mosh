@@ -13,9 +13,15 @@ add_executable(c___prac
         Bankaccount.cpp
         Bankaccount.h
         classes/main.cpp
+        classes/Length.cpp
+        classes/Length.h
+
 )
 
 add_executable(lab_tasks lab_tasks.cpp)
 add_executable(new_target classes/class_how.cpp classes/class_how.h classes/main.cpp
         classes/Smarptr.cpp
         classes/Smarptr.h)
+
+add_executable(Operator_overloading classes/main.cpp classes/Length.cpp classes/Length.h classes/Point.cpp
+        classes/Point.h)
