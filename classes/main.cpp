@@ -12,7 +12,31 @@ using namespace std;
 //
 // }
 int main() {
-    Smarptr ptr(new int);
+    // making arrays obj
+
+    Rectangle react[] {
+        Rectangle{},
+        Rectangle{23,24},
+        Rectangle{25,26,"shams"}
+    };
+    cout<<react[0].getheight()<<endl;
+    cout<<react[1].getheight()<<endl;
+    cout<<react[2].getheight()<<endl;
+    react[2].show();
+    cout<<endl;
+    react[1].show();
+    cout<<endl;
+    for (int i=0;i<size(react);i++) {
+        react[i].show();
+        cout<<endl;
+    }
+    for (Rectangle r : react) {
+        r.show();
+    }
+
+
+
+    // Smarptr ptr(new int);
 
     // auto rectangle= make_unique<Rectangle>(10,10,"Hello World");   ;
     // cout<<rectangle->getObj();

@@ -25,6 +25,14 @@ void Rectangle::setheight(int height) {
     this->height = height;
 
 }
+void Rectangle::show() {
+    cout<<"width:"<<width<<endl
+        <<"height:"<<height<<endl
+         <<"name:"<<name<<endl;
+
+    cout<<"show function are being called\n";
+
+}
 
 int Rectangle::obj;
 int Rectangle::getObj() {

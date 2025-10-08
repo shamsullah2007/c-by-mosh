@@ -21,13 +21,14 @@ class Rectangle{
     Rectangle()=default;
     Rectangle(int width,int height);
     Rectangle(int width,int height,const string& name);
-    Rectangle(const Rectangle& r)=delete;
+    // Rectangle(const Rectangle& r)=delete;
     //THE GRTTER
     int getWidth()  ;
     //THE MUTATOR
     void setWidth(int width);
     int getheight() const;
     void setheight(int height);
+    void show( );
 
 
 };
