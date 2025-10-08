@@ -23,7 +23,7 @@ class Rectangle{
     Rectangle(int width,int height,const string& name);
     Rectangle(const Rectangle& r)=delete;
     //THE GRTTER
-    int getWidth() const ;
+    int getWidth()  ;
     //THE MUTATOR
     void setWidth(int width);
     int getheight() const;

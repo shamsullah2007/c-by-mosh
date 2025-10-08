@@ -16,4 +16,6 @@ add_executable(c___prac
 )
 
 add_executable(lab_tasks lab_tasks.cpp)
-add_executable(new_target classes/class_how.cpp classes/class_how.h classes/main.cpp)
+add_executable(new_target classes/class_how.cpp classes/class_how.h classes/main.cpp
+        classes/Smarptr.cpp
+        classes/Smarptr.h)

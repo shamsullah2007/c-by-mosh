@@ -50,6 +50,6 @@ Rectangle::Rectangle(int width, int height, const string &name): Rectangle(width
 //     this->name = r.name;
 // }
 
-int Rectangle::getWidth()const  {
+int Rectangle::getWidth()  {
     return width;
 }
