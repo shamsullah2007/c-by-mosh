@@ -19,8 +19,9 @@ private:
     //by using friend of a class we can access the private attributes of the class without defining the getter and the setter
 
 public:
-    Length(int value);
+    explicit Length(int value);
     Length operator+(const Length& other);
+    Length operator+(int& other)const;
     // bool equal(const Length &other) const;
     // bool operator==(const Length &other) const;
     // bool operator<(const Length &other) const;

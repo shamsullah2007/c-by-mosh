@@ -53,17 +53,27 @@
 #include <iostream>
 
 #include "Length.h"
+#include "Poiint.h"
 using namespace std;
 int main() {
-    int x=40;
-    int y=89;
-    operation_on_points first{x,y};
-    Length first_length{23};
-    cout<<first;
-    cout<<first_length<<endl;//operator<<(cout,first_length);
-    cout<<"Length: ";
-    cin>>first_length;
-    cout<<first_length;
+    // // int x=40;
+    // // int y=89;
+    // // operation_on_points first{x,y};
+    // Length first_length{23};
+    // Length second_length{23};
+    // // cout<<first;
+    // // cout<<first_length<<endl;//operator<<(cout,first_length);
+    // // cout<<"Length: ";
+    // // cin>>first_length;
+    // // cout<<first_length;
+    // int x=10;
+    // auto third_length=first_length+x;
+    // cout << third_length << endl;
+    Poiint point{23,34};
+    Poiint point1{23,34};
+
+    cout<<point+25<<endl;
+
 
 
 }
