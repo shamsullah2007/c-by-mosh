@@ -14,6 +14,8 @@ class operation_on_points {
     int y;
     public:
     operation_on_points(int& x, int& y);
+
+
     int get_x()const;
     int get_y()const;
     void set_x(int& x);

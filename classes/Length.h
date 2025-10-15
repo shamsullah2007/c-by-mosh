@@ -13,8 +13,14 @@ using namespace std;
 class Length {
 private:
     int value;
+    // int y;
+    friend ostream& operator<<(ostream& stream,const Length& other);
+    friend istream& operator>>(istream &stream, Length &other);
+    //by using friend of a class we can access the private attributes of the class without defining the getter and the setter
+
 public:
     Length(int value);
+    Length operator+(const Length& other);
     // bool equal(const Length &other) const;
     // bool operator==(const Length &other) const;
     // bool operator<(const Length &other) const;

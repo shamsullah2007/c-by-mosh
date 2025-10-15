@@ -13,6 +13,10 @@ Length::Length(int value): value(value) {
 
 }
 
+Length Length::operator+(const Length &other) {
+    return Length(value+other.value);
+}
+
 // bool Length::equal(const Length &other) const {
 //     return value == other.value;
 // bool Length::operator==(const Length &other) const {
@@ -33,14 +37,16 @@ int Length::getValue() const {
     return value;
 }
 ostream& operator<<(ostream& stream,const Length& other)  {
-    stream<<other.getValue();
+    stream<<other.value<<" "<<other.y<<endl;
     return stream;
 }
 
 istream & operator>>(istream &stream, Length &other) {
     int value;
-    cin>>value;
-    other.setValue(value);
+    int y;
+    cin>>value>>y;
+    other.value = value;
+    other.y = y;
     return stream;
 }
 
