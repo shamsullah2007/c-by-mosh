@@ -51,21 +51,23 @@
 // }
 #include "operation_on_points.h"
 #include <iostream>
+#include <cstdlib>
 
 #include "Length.h"
 #include "Poiint.h"
+#include "Array.h"
 using namespace std;
 int main() {
-    Length first{20};
-    // Length second=first++;
-    Length second=++first;
-    cout << second << endl;
-    cout << first << endl;
-    Poiint first2{10,20};
-    Poiint second2=first2++;
-    // Poiint second2=++first2;
-    cout << second2 << endl;
-    cout << first2 << endl; 
+    Array arr{10};
+    for (size_t i = 0; i < 10; i++) {
+        arr[i]=rand()%100+1;
+
+    }
+    for (size_t i = 0; i < 10; i++) {
+        cout << arr[i] << endl;
+    }
+
+
 
 
 

@@ -19,6 +19,8 @@ add_executable(c___prac
         classes/operation_on_points.h
         classes/Poiint.cpp
         classes/Poiint.h
+        classes/Array.cpp
+        classes/Array.h
 
 )
 
@@ -28,4 +30,5 @@ add_executable(lab_tasks lab_tasks.cpp)
 #        classes/Smarptr.h)
 
 add_executable(Operator_overloading classes/main.cpp classes/Length.cpp classes/Length.h classes/Point.cpp
-        classes/Point.h classes/operation_on_points.cpp classes/operation_on_points.h classes/Poiint.cpp classes/Poiint.h)
+        classes/Point.h classes/operation_on_points.cpp classes/operation_on_points.h classes/Poiint.cpp classes/Poiint.h
+classes/Array.cpp classes/Array.h)
