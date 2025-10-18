@@ -4,11 +4,16 @@
 
 #include "Smarptr.h"
 
-Smarptr::Smarptr(int *ptr) : ptr(ptr){
+Smarptr::Smarptr(int *ptr) {
+    this->ptr = ptr;
 
 }
 
 Smarptr::~Smarptr() {
     delete ptr;
     ptr = nullptr;
+}
+
+int & Smarptr::operator*() {
+    return *ptr;
 }

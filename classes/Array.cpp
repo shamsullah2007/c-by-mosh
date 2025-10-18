@@ -6,7 +6,6 @@
 #include <stdexcept>
 
 Array::Array(size_t size) {
-
     valuess=new int[size];
     this->size=size;
 

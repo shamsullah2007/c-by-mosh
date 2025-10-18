@@ -9,9 +9,11 @@
 class Smarptr {
 private:
     int* ptr;
-    public:
+public:
     Smarptr(int* ptr);
     ~Smarptr();
+    int& operator*();
+
 
 };
 
