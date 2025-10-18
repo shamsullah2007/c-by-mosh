@@ -40,6 +40,20 @@ void Length::setValue(int value)  {
 int Length::getValue() const {
     return value;
 }
+
+Length& Length::operator++() {
+    ++value;
+    return *this;
+
+}
+Length Length::operator++(int) {
+    Length copy = *this;
+    // ++value;
+    operator++();
+    return copy;
+
+}
+
 ostream& operator<<(ostream& stream,const Length& other)  {
     stream<<other.value<<endl;
     return stream;

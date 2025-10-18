@@ -14,12 +14,14 @@ class Poiint {
     friend std::ostream& operator<<(std::ostream& os, const Poiint& p);
     public:
     Poiint();
-    Poiint(const Poiint& p)= delete;
+    // Poiint(const Poiint& p)= delete  ;
     Poiint(int x, int y);
     Poiint operator+(const Poiint &p)const;
     Poiint operator+(const int p)const;
     Poiint& operator+=(const Poiint p);
     Poiint& operator=(const Poiint& p);
+    Poiint& operator++();
+    Poiint operator++(int);
 };
 std::ostream& operator<<(std::ostream& os, const Poiint& p);
 

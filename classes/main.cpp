@@ -56,31 +56,20 @@
 #include "Poiint.h"
 using namespace std;
 int main() {
-    // // int x=40;
-    // // int y=89;
-    // // operation_on_points first{x,y};
-    // Length first_length{23};
-    // Length second_length{23};
-    // // cout<<first;
-    // // cout<<first_length<<endl;//operator<<(cout,first_length);
-    // // cout<<"Length: ";
-    // // cin>>first_length;
-    // // cout<<first_length;
-    // int x=10;
-    // auto third_length=first_length+x;
-    // cout << third_length << endl;
-    Poiint point{23,340000000};
-    Poiint point1{23,340000000};
-    //copy operation will be helled  because we are assining the obj to the new object
-    Poiint point2=point;
-    // Poiint t=point+=point1;
-    // cout << t << endl;
-    //assignmet operation will b heled because we are working with the existing object
-    // point=point1;
-    // cout << point;
+    Length first{20};
+    // Length second=first++;
+    Length second=++first;
+    cout << second << endl;
+    cout << first << endl;
+    Poiint first2{10,20};
+    Poiint second2=first2++;
+    // Poiint second2=++first2;
+    cout << second2 << endl;
+    cout << first2 << endl; 
 
 
-    // cout<<point+25<<endl;
+
+
 
 
 

@@ -20,6 +20,7 @@ private:
 
 public:
     explicit Length(int value);
+
     Length operator+(const Length& other);
     Length operator+(int& other)const;
     // bool equal(const Length &other) const;
@@ -31,6 +32,8 @@ public:
     // strong_ordering operator<=>(const Length & other) const;
     void setValue(int value);
     int getValue() const;
+    Length& operator++();
+    Length operator++(int);
 };
 
 ostream& operator<<(ostream& stream,const Length& other);

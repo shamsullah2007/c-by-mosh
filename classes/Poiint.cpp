@@ -31,6 +31,18 @@ Poiint & Poiint::operator=(const Poiint &p) {
     return *this;
 }
 
+Poiint & Poiint::operator++() {
+    x++;
+    y++;
+    return *this;
+}
+
+Poiint Poiint::operator++(int) {
+    Poiint copy=*this;
+    operator++();
+    return copy;
+}
+
 std::ostream & operator<<(std::ostream &os, const Poiint &p) {
     os<<p.x<<" "<<p.y;
 }
