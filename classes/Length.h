@@ -34,6 +34,7 @@ public:
     int getValue() const;
     Length& operator++();
     Length operator++(int);
+    explicit  operator int()const;
 };
 
 ostream& operator<<(ostream& stream,const Length& other);

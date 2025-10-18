@@ -54,6 +54,10 @@ Length Length::operator++(int) {
 
 }
 
+Length::operator int() const {
+    return value;
+}
+
 ostream& operator<<(ostream& stream,const Length& other)  {
     stream<<other.value<<endl;
     return stream;

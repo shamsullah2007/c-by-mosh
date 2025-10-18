@@ -59,11 +59,9 @@
 #include"Smarptr.h"
 using namespace std;
 int main() {
-    Smarptr ptr{new int(100)};
-    // *ptr=100;
-    cout << *ptr << endl;
-    *ptr = 156789002345;
-    cout << *ptr << endl;
+    Length lenght{234};
+    int x = static_cast<int>(lenght);
+    cout << x << endl;
 
 
 }
