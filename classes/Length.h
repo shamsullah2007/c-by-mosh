@@ -34,7 +34,7 @@ public:
     int getValue() const;
     Length& operator++();
     Length operator++(int);
-    explicit  operator int()const;
+    explicit  operator int()const;//THIS FOR TYPE CONVERTION OF LENGTH OBJ TO AND INTEGER
 };
 
 ostream& operator<<(ostream& stream,const Length& other);
