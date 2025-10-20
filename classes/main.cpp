@@ -52,16 +52,29 @@
 #include "operation_on_points.h"
 #include <iostream>
 #include <cstdlib>
+#include "Recctangle.h"
 
 #include "Length.h"
 #include "Poiint.h"
 #include "Array.h"
+#include "Circle.h"
 #include"Smarptr.h"
+#include "Textbox.h"
 using namespace std;
 int main() {
-    Length lenght{234};
-    int x = static_cast<int>(lenght);
-    cout << x << endl;
-
+//     Recctangle rec;
+//     string colour="blue";
+//     rec.setBackground(colour);
+//     cout << rec.getBackground() << endl;
+    // Circle circle;
+    // string name = "Circle";
+    // circle.setBackground(name);
+    // cout<<"Name = "<<circle.getBackground()<<endl;
+    //
+    // circle.setRadius(10);
+    // cout<<circle.area(circle.getRadius()) << endl;
+    Textbox tb;
+    tb.setEnabled(false);
+    cout<<tb.isEnabled()<<endl;
 
 }

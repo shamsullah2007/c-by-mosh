@@ -22,6 +22,7 @@ add_executable(c___prac
         classes/Array.cpp
         classes/Array.h
 
+
 )
 
 add_executable(lab_tasks lab_tasks.cpp)
@@ -31,4 +32,14 @@ add_executable(lab_tasks lab_tasks.cpp)
 
 add_executable(Operator_overloading classes/main.cpp classes/Length.cpp classes/Length.h classes/Point.cpp
         classes/Point.h classes/operation_on_points.cpp classes/operation_on_points.h classes/Poiint.cpp classes/Poiint.h
-classes/Array.cpp classes/Array.h classes/Smarptr.h classes/Smarptr.cpp)
+classes/Array.cpp classes/Array.h classes/Smarptr.h classes/Smarptr.cpp
+        classes/Recctangle.cpp
+        classes/Recctangle.h
+        classes/Shape.cpp
+        classes/Shape.h
+        classes/Circle.cpp
+        classes/Circle.h
+        classes/Widget.cpp
+        classes/Widget.h
+        classes/Textbox.cpp
+        classes/Textbox.h)

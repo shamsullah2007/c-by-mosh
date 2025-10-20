@@ -406,16 +406,41 @@ using namespace std;
 //             countzero++;
 //             cin>>number;}}
 //     cout<<endl<<"positive "<<count_positve<<endl<<"Negative "<<countneg<<endl<<"zero "<<countzero;
-
+//
+// int main() {
+//     int a ,b;
+//     cout<<"enter two number:";
+//     cin>>a>>b;
+//     for (int i = 1;i>0;i++) {
+//         if (i%a==0 && i%b==0) {
+//             cout<<"lcm is = "<<i;
+//             break;
+//         }
+//
+//     }
+// }
 int main() {
-    int a ,b;
-    cout<<"enter two number:";
-    cin>>a>>b;
-    for (int i = 1;i>0;i++) {
-        if (i%a==0 && i%b==0) {
-            cout<<"lcm is = "<<i;
-            break;
-        }
-
+    int size;
+    int* arr=new int[size];
+    cout<<arr;
+    cin >> size;
+    for (int i =0; i < size; i++) {
+        cout<<"arr["<<i<<"] = ";
+        cin >> arr[i];
     }
+    cout<<"[";
+    for (int i = 0; i < size; i++) {
+        cout<<arr[i]<<",";
+    }
+    cout<<"]"<<endl;
+    delete [] arr;
+    arr = nullptr;
+    if (arr==nullptr) {
+        cout<<"null"<<endl;
+    }
+    else {
+        cout<<"arr address: "<<arr<<endl;
+    }
+    cout<<&arr;
+    return 0;
 }
