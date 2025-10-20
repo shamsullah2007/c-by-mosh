@@ -8,24 +8,16 @@
 #include <ostream>
 using namespace std;
 
-// Widget::Widget() {
-//     cout<<"Widget constructor are being called"<<endl;
-// }
 
-// void Widget::enable() {
-//     enabled = true;
-// }
-//
-// void Widget::disable() {
-//     enabled = false;
-// }
 void Widget::setEnabled(bool enabled) {
     this->enabled = enabled;
 }
-Widget::Widget(bool enabled): enabled(enabled) {
-    cout<<enabled<<endl<<"the base class constructor are being called"<<endl;
 
+Widget::~Widget() {
+    cout << "Widget::~Widget" << endl;
 }
+
+
 
 
 bool Widget::isEnabled() {

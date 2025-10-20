@@ -73,6 +73,6 @@ int main() {
     //
     // circle.setRadius(10);
     // cout<<circle.area(circle.getRadius()) << endl;
-    Textbox tb{true};
+    Textbox tb;
 
 }

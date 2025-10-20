@@ -10,9 +10,8 @@
 class Textbox : public Widget{
     int body;
     public:
-    using Widget::Widget;
-    // Textbox();
-    // explicit Textbox(int width);
+    ~Textbox();
+
 };
 
 
