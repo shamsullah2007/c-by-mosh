@@ -7,8 +7,11 @@
 
 
 class Widget {
+    protected:
     bool enabled;
     public:
+
+    explicit Widget( bool enabled);
     // void enable();
     // void disable();
     void setEnabled(bool enabled) ;

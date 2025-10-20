@@ -73,8 +73,6 @@ int main() {
     //
     // circle.setRadius(10);
     // cout<<circle.area(circle.getRadius()) << endl;
-    Textbox tb;
-    tb.setEnabled(false);
-    cout<<tb.isEnabled()<<endl;
+    Textbox tb{true};
 
 }
