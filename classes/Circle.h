@@ -9,10 +9,10 @@
 class Circle:public Shape{
     int radius;
     public:
-    void draw()const override;
+    // void draw()const override;
     void setRadius(int r);
     int getRadius();
-
+    ~Circle();
     float area(int r);
 
 };

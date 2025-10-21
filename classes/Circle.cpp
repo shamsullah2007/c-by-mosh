@@ -4,9 +4,9 @@
 
 #include "Circle.h"
 
-void Circle::draw() const {
-    cout<<"drawing circle\n";
-}
+// void Circle::draw() const {
+//     cout<<"drawing circle\n";
+// }
 
 void Circle::setRadius(int r) {
     this->radius=r;
@@ -18,6 +18,10 @@ int Circle::getRadius() {
 
     return radius;
 
+}
+
+Circle::~Circle() {
+    cout<<"destroying circle\n";
 }
 
 float Circle::area(int r) {

@@ -8,9 +8,10 @@ void Shape::setBackground(string & colour) {
     background = colour;
 }
 
-void Shape::draw() const {
-    cout<<"Drawing Shape"<<endl;
+Shape::~Shape() {
+    cout<<"destroying shape\n";
 }
+
 
 string Shape::getBackground() {
     return background;

@@ -7,3 +7,7 @@
 void Recctangle::draw() const {
     cout<<"drawing rectangle\n";
 }
+
+Recctangle::~Recctangle() {
+    cout<<"destroying rectangle\n";
+}

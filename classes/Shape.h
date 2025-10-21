@@ -11,9 +11,10 @@ class Shape {
 private:
     string background;
     public:
-    virtual  void draw()const;
+    virtual  void draw()const=0;
     string getBackground();
     void setBackground(string& colour);
+    virtual ~Shape();
 };
 
 

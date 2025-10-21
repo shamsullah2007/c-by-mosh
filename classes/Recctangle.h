@@ -11,6 +11,7 @@ class Recctangle:public Shape {
 public:
     int angle=4;
     void draw()const override;
+    ~Recctangle();
 };
 
 

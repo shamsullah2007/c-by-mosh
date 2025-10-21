@@ -71,6 +71,7 @@ void show(Shape& num) {
 
 }
 int main() {
+
 //     Recctangle rec;
 //     string colour="blue";
 //     rec.setBackground(colour);
@@ -87,7 +88,7 @@ int main() {
     // // tb.draw();
     // vector<Shape*> shapes; buy using default dynamic pointers so you have to deal with  the memory leak senario
     vector<unique_ptr<Shape>> shapes;
-    shapes.push_back(make_unique<Circle>());//buy doing only this & the temprory memory elocated for the shapes pointer once this line goes out of scop then it get release and out pointer points to garbage memory
+    // shapes.push_back(make_unique<Circle>());//buy doing only this & the temprory memory elocated for the shapes pointer once this line goes out of scop then it get release and out pointer points to garbage memory
     shapes.push_back(make_unique<Recctangle>());
     for (const auto& shape : shapes) {
         shape->draw();
