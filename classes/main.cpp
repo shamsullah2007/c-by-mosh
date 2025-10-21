@@ -53,6 +53,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "Recctangle.h"
+#include <memory>
 
 #include "Length.h"
 #include "Poiint.h"
@@ -60,8 +61,12 @@
 #include "Circle.h"
 #include"Smarptr.h"
 #include "Textbox.h"
+#include  <vector>
+
+#include "class_how.h"
+#include "Point.h"
 using namespace std;
-void show(Shape num) {
+void show(Shape& num) {
     num.draw();
 
 }
@@ -80,7 +85,13 @@ int main() {
     // Textbox tb;
     // show(tb);
     // // tb.draw();
-    Circle c;
-    show(c);
+    // vector<Shape*> shapes; buy using default dynamic pointers so you have to deal with  the memory leak senario
+    vector<unique_ptr<Shape>> shapes;
+    shapes.push_back(make_unique<Circle>());//buy doing only this & the temprory memory elocated for the shapes pointer once this line goes out of scop then it get release and out pointer points to garbage memory
+    shapes.push_back(make_unique<Recctangle>());
+    for (const auto& shape : shapes) {
+        shape->draw();
+    }
+
 
 }

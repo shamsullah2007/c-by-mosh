@@ -9,7 +9,7 @@
 class Circle:public Shape{
     int radius;
     public:
-    void draw()const ;
+    void draw()const override;
     void setRadius(int r);
     int getRadius();
 

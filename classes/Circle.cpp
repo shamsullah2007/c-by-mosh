@@ -5,7 +5,7 @@
 #include "Circle.h"
 
 void Circle::draw() const {
-    cout<<"drawing circle";
+    cout<<"drawing circle\n";
 }
 
 void Circle::setRadius(int r) {
