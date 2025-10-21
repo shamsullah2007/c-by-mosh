@@ -61,6 +61,10 @@
 #include"Smarptr.h"
 #include "Textbox.h"
 using namespace std;
+void show(Shape num) {
+    num.draw();
+
+}
 int main() {
 //     Recctangle rec;
 //     string colour="blue";
@@ -73,6 +77,10 @@ int main() {
     //
     // circle.setRadius(10);
     // cout<<circle.area(circle.getRadius()) << endl;
-    Textbox tb;
+    // Textbox tb;
+    // show(tb);
+    // // tb.draw();
+    Circle c;
+    show(c);
 
 }

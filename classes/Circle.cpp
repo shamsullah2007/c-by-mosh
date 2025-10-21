@@ -4,6 +4,10 @@
 
 #include "Circle.h"
 
+void Circle::draw() const {
+    cout<<"drawing circle";
+}
+
 void Circle::setRadius(int r) {
     this->radius=r;
 

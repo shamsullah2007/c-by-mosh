@@ -11,6 +11,7 @@ class Shape {
 private:
     string background;
     public:
+    void draw()const;
     string getBackground();
     void setBackground(string& colour);
 };

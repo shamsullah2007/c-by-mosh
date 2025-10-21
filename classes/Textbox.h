@@ -10,6 +10,9 @@
 class Textbox : public Widget{
     int body;
     public:
+    //overriding happens
+
+    void draw()const override;
     ~Textbox();
 
 };

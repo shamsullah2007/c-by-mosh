@@ -9,7 +9,10 @@
 using namespace std;
 
 
+void Textbox::draw() const {
+    cout<<"Textbox::draw(2345678)"<<endl;
+}
 
 Textbox::~Textbox() {
-    cout << "Textbox::~Textbox" << endl;
+    // cout << "Textbox::~Textbox" << endl;
 }

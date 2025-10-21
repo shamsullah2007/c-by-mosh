@@ -10,6 +10,7 @@ class Widget {
     protected:
     bool enabled;
     public:
+    virtual  void draw()const;
     ~Widget();
     // void enable();
     // void disable();

@@ -8,13 +8,16 @@
 #include <ostream>
 using namespace std;
 
-
 void Widget::setEnabled(bool enabled) {
     this->enabled = enabled;
 }
 
+void Widget::draw() const {
+    cout<<"widget::draw(2345678)"<<endl;
+}
+
 Widget::~Widget() {
-    cout << "Widget::~Widget" << endl;
+    // cout << "Widget::~Widget" << endl;
 }
 
 

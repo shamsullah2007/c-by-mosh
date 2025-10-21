@@ -9,6 +9,7 @@
 class Circle:public Shape{
     int radius;
     public:
+    void draw()const ;
     void setRadius(int r);
     int getRadius();
 
